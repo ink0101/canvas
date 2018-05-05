@@ -2,6 +2,7 @@
 
 ### 重点
 * 基于状态绘制
+* 将状态设置与确定绘制的代码分隔开，增强可读性
 
 ### 绘制画布
 ```
@@ -23,10 +24,12 @@ context.lineTo(x, y) // 画笔停点
 context.lineWidth = 5 // 设置线条宽度
 context.strokeStyle = '#666' // 设置线条颜色
 
+// 确定绘制
 contest.stroke(); // 描边
 contest.fill(); // 填充
 
-context.beginPath(); //设置绘制的起始处
-context.closePath(); //
+//包裹规划路径
+context.beginPath(); // 设置绘制的起始处
+context.closePath(); // 设置绘制结束点，闭合图形
 ```
 
