@@ -1,0 +1,9 @@
+.canvas {
+  border: 1px solid #999;
+  width: 600px;
+  height: 400px;
+  background-color: aliceblue;
+  margin: 0 auto;
+  display: block;
+  /* border-radius: 50%; */
+}
