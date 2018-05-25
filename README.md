@@ -52,9 +52,10 @@ context.rect(x, y, width, height);
 ##### lineJoin 属性
 	两条线相交产生的拐点，可将其称为连接。
 
-* miter：默认值，在连接处边缘延长相接
-* bevel：连接处是一个对角线斜角
-* round：连接处是一个圆
+* miter：默认值，在连接处边缘延长相接。
+	* miterLimit： 规定自动填充连接点的极限，如果超过这个值，会导致lineJoin值失效。
+* bevel：连接处是一个对角线斜角。
+* round：连接处是一个圆。
 
 ##### 线宽 lineWidth
 
