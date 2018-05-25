@@ -3,21 +3,6 @@ canvas.width = 800;
 canvas.height = 600;
 
 const context = canvas.getContext('2d');
-// context.moveTo(100, 100);
-// context.lineTo(400, 100);
-// context.lineTo(400, 300);
-// context.lineTo(100, 300);
-// // 火狐可以明显看到左上角缺角，Chrome正常
-// // context.lineTo(100, 100);
-// context.closePath();
-
-// context.lineWidth = 3;
-// context.strokeStyle = 'red';
-// context.fillStyle = 'yellow';
-
-// context.stroke();
-// context.fill();
-
 
 function drawRect(context, params) {
   const {
@@ -30,10 +15,7 @@ function drawRect(context, params) {
     borderColor = 'skyBlue',
   } = params;
   context.beginPath();
-  context.moveTo(x, y);
-  context.lineTo(x + width, y);
-  context.lineTo(x + width, y + height);
-  context.lineTo(x, y + height);
+  context.rect(x, y, width, height);
   context.closePath();
 
   context.lineWidth = borderWidth;
