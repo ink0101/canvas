@@ -46,4 +46,3 @@ for (let i = 0; i < num; i++) {
     height: 100 - i * 10,
   })
 }
-
