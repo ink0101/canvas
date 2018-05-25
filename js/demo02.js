@@ -34,3 +34,16 @@ const params1 = {
 
 drawRect(context, {});
 drawRect(context, params1);
+
+const num = 10;
+for (let i = 0; i < num; i++) {
+  drawRect(context, {
+    borderColor: '#fff',
+    fillColor : '#000',
+    x: 500 + i * 5,
+    y: 100 + i * 5,
+    width: 100 - i * 10,
+    height: 100 - i * 10,
+  })
+}
+
