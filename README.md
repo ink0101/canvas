@@ -37,6 +37,9 @@ context.closePath(); // 设置绘制结束点，闭合图形
 
 // 绘制矩形
 context.rect(x, y, width, height);
+// 绘制矩形的便捷方法
+context.fillRect(x,y,width,height)
+context.stroke(x,y,width,height)
 
 ```
 
@@ -72,6 +75,15 @@ context.rect(x, y, width, height);
 * hsl()
 * hsla()
 
+``` js
+context.fillStyle = 'red'
+context.fillStyle = '#FF0000'
+context.fillStyle = 'rgb(255, 0, 0)'
+context.fillStyle = 'rgba(255, 0, 0, 1)'
+context.fillStyle = 'hls(0, 100%, 50%)'
+context.fillStyle = 'hls(0, 100%, 50%, 1)'
+```
+
 ##### 渐变颜色
 
 * 线性
@@ -81,9 +93,50 @@ context.rect(x, y, width, height);
 * 径向
 
 	自中心点创建一个放射状填充
+
+###### 线性渐变
 	
 步骤：
 
 1. 添加渐变线
-2. 为渐变线添加关键色
+
+	``` js
+	var grd = context.createLinearGradient(xstart,ystart,xend,yend);
+	```
+
+2. 为渐变线添加关键色(颜色断电)
+
+	``` js
+	grd.addColorStop(stop,color);
+	```
+
 3. 应用渐变
+
+	``` js
+	context.fillStyle = grd;
+	context.strokeStyle = grd;
+	```
+
+###### 径向渐变
+
+步骤：
+
+1. 添加渐变圆
+
+	``` js
+	var grd = context.createRadialGradient(x0,y0,r0,x1,y1,r1);
+	```
+
+2. 为渐变线添加关键色
+
+	``` js
+	grd.addColorStop(stop,color);
+	```
+
+3. 应用渐变
+
+	``` js
+	context.fillStyle = grd;
+	context.strokeStyle = grd;
+	```
+
